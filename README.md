@@ -1,4 +1,4 @@
-# hand-hillclimbracing
+# Hand Gesture Control
 
 This program detects hand gestures in real-time using the Mediapipe library and controls the keyboard keys accordingly. It can be used to control games or other applications using hand gestures.
 
