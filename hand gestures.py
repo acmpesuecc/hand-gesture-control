@@ -42,12 +42,12 @@ with mp_hands.Hands(
                     index_finger_tip_y = index_finger_tip.y*h
 
                     if index_finger_tip_x > w/2:
-                        cv2.putText(image, "Gas", (500, 70),
+                        cv2.putText(image, (500, 70),
                                     cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 250))
                         pyautogui.keyDown('right')
                         pyautogui.keyUp('left')
                     elif index_finger_tip_x < w/2:
-                        cv2.putText(image, "Gas", (500, 70),
+                        cv2.putText(image, (500, 70),
                                     cv2.FONT_HERSHEY_SIMPLEX, 1.5, (250, 0))
                         pyautogui.keyDown('left')
                         pyautogui.keyUp('right')
