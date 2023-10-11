@@ -2,7 +2,6 @@ import time
 import pyautogui
 
 def detect_hand_position(x, y, scrw, scrh):
-    # Define the regions for each key
     leftarea = (0, 0, scrw // 2, scrh // 2)
     uparea = (0, 0, scrw // 2, scrh // 2)
     downarea = (scrw // 2, scrh // 2, scrw, scrh)
