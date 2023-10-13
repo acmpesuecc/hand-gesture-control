@@ -50,6 +50,11 @@ def hand_tracking():
                         elif index_finger_tip_x < w/2:
                             cv2.putText(image, "Left", (500, 70),
                                         cv2.FONT_HERSHEY_SIMPLEX, 1.5, (250, 0))
+                        
+                        if index_finger_tip_y < h / 2:
+                            cv2.putText(image, "Up", (500, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 250))
+                        elif index_finger_tip_y > h / 2:
+                            cv2.putText(image, "Down", (500, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (250, 0))
 
                 cv2.line(image, (int(w/2), 0), (int(w/2), h), (0, 255, 0), 2)
 
