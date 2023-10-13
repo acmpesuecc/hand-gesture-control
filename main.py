@@ -39,7 +39,7 @@ def hand_tracking():
                                                   mp_drawing_styles.get_default_hand_landmarks_style(),
                                                   mp_drawing_styles.get_default_hand_connections_style())
 
-                        index_finger_tip = hand_landmarks.landmark[0]
+                        index_finger_tip = hand_landmarks.landmark[13]
 
                         index_finger_tip_x = index_finger_tip.x * w
                         index_finger_tip_y = index_finger_tip.y * h
