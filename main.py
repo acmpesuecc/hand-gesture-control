@@ -11,6 +11,10 @@ mp_hands = mp.solutions.hands
 
 cap = cv2.VideoCapture(0)
 
+if not cap.isOpened():
+    print("Error: Camera not detected. Exiting.")
+    exit()
+
 def hand_tracking():
     with mp_hands.Hands(
         model_complexity=1,
@@ -19,6 +23,10 @@ def hand_tracking():
 
         while cap.isOpened():
             success, image = cap.read()
+            if not success:
+                print("Error: Unable to read frame. Exiting.")
+                break
+
             h, w, c = image.shape
             start = time.perf_counter()
 
