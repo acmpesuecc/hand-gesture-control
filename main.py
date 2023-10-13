@@ -10,6 +10,10 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
 cap = cv2.VideoCapture(0)
+if cap==None:
+    cv2.destroyAllWindows()
+    exit()
+    
 
 def hand_tracking():
     with mp_hands.Hands(
